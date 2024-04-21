@@ -14,12 +14,12 @@ function App() {
       <Show above="lg">
         <GridItem area="aside" bg="gold">
           {" "}
-          Aside
+          ignore
         </GridItem>
       </Show>
       <GridItem area="main" bg="coral">
         {" "}
-        Main
+        ignore2
       </GridItem>
     </Grid>
   );

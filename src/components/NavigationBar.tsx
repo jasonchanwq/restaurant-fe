@@ -4,9 +4,15 @@ import logo from "../assets/logo.png";
 
 const NavigationBar = () => {
   return (
-    <HStack>
+    <HStack justifyContent="space-between" padding="50px">
       <img src={logo} style={{ width: "100px", height: "100px" }} />
-      <Text>Navigation Bar</Text>
+      <Text>Navigation Bar Component</Text>
+      <Text>Button</Text>
+      <Text>Button</Text>
+      <Text>Button</Text>
+      <Text>Button</Text>
+      <Text>Button</Text>
+      <Text>Button</Text>
     </HStack>
   );
 };
