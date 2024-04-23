@@ -6,25 +6,23 @@ function App() {
   //return <Button colorScheme="blue">Button</Button>;
   return (
     <>
-      <Background></Background>
-      <Grid
-        templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      >
-        <GridItem area="nav">
-          {" "}
-          <NavigationBar />
-        </GridItem>
-        <Show above="lg">
-          <GridItem area="aside" bg="gold">
+      <Background>
+        <Grid
+          templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
+        >
+          <GridItem area="nav"> </GridItem>
+          <Show above="lg">
+            <GridItem area="aside" bg="gold">
+              {" "}
+              ignore
+            </GridItem>
+          </Show>
+          <GridItem area="main" bg="coral">
             {" "}
-            ignore
+            ignore2
           </GridItem>
-        </Show>
-        <GridItem area="main" bg="coral">
-          {" "}
-          ignore2
-        </GridItem>
-      </Grid>
+        </Grid>
+      </Background>
     </>
   );
 }

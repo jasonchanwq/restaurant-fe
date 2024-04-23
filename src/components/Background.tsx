@@ -3,8 +3,13 @@ import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 import image4 from "../assets/image4.jpg";
+import NavigationBar from "./NavigationBar";
 
-const Background = ({}) => {
+interface BackgroundProps {
+  children?: React.ReactNode; // Explicitly type children as React.ReactNode
+}
+
+const Background = ({ children }: BackgroundProps) => {
   const images = [image1, image2, image3, image4]; // Array of imported images
   const [backgroundImage, setBackgroundImage] = useState(0);
 
@@ -26,8 +31,12 @@ const Background = ({}) => {
         /* Add other background properties as needed */
         minHeight:
           "100vh" /* Ensure the background covers the entire viewport */,
+        position: "relative", // Add position relative to contain the children
       }}
-    ></div>
+    >
+      <NavigationBar /> {/* Render NavigationBar within the Background */}
+      {children} {/* Render additional children */}
+    </div>
   );
 };
 
