@@ -1,0 +1,19 @@
+.background-image {
+  transition: background-size 0.5s ease; /* Smooth transition for background size change */
+}
+
+.zoom-animation {
+  animation: zoom 5s forwards;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 100%;
+  }
+  60% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}

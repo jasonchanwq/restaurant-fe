@@ -7,24 +7,6 @@ function App() {
   return (
     <>
       <Background></Background>
-      <Grid
-        templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      >
-        <GridItem area="nav">
-          {" "}
-          <NavigationBar />
-        </GridItem>
-        <Show above="lg">
-          <GridItem area="aside" bg="gold">
-            {" "}
-            ignore
-          </GridItem>
-        </Show>
-        <GridItem area="main" bg="coral">
-          {" "}
-          ignore2
-        </GridItem>
-      </Grid>
     </>
   );
 }
