@@ -6,7 +6,7 @@ const NavigationBar = () => {
   return (
     <HStack justifyContent="space-between" padding="50px">
       <img src={logo} style={{ width: "100px", height: "100px" }} />
-      <HStack spacing={6}>
+      <HStack spacing={6} color={"white"}>
         <Text>Navigation Bar Component</Text>
         <Text>Button</Text>
         <Text>Button</Text>

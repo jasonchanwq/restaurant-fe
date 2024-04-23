@@ -78,8 +78,7 @@ const Background = ({ children }: BackgroundProps) => {
             style={{
               width: "15px",
               height: "15px",
-              backgroundColor:
-                index === backgroundImage ? "gray" : "rgba(255, 255, 255, 0.3)",
+              backgroundColor: index === backgroundImage ? "white" : "gray",
               marginBottom: "10px",
               position: "relative",
               left: "90%",
