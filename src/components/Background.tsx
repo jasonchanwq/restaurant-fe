@@ -23,7 +23,7 @@ const Background = ({ children }: BackgroundProps) => {
     }, 5000); // Change image every 5 seconds
     setIntervalId(id);
     return () => clearInterval(id);
-  }, []); // Run effect only once when component mounts
+  }, []); // Run effect only once when component mounts due to empty bracket
 
   useEffect(() => {
     // Reset the background animation whenever the background image changes
