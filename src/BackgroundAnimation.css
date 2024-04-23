@@ -3,14 +3,17 @@
 }
 
 .zoom-animation {
-  animation: zoom 20s infinite;
+  animation: zoom 5s forwards;
 }
 
 @keyframes zoom {
   0% {
     background-size: 100%;
   }
+  60% {
+    background-size: 120%;
+  }
   100% {
-    background-size: 200%;
+    background-size: 120%;
   }
 }
