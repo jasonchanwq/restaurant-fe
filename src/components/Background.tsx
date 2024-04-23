@@ -21,6 +21,10 @@ const Background = ({ children }: BackgroundProps) => {
     return () => clearInterval(interval);
   }, []); // Run effect only once when component mounts
 
+  const changeBackgroundImage = (index: number) => {
+    setBackgroundImage(index);
+  };
+
   return (
     <div
       className="background-image"
@@ -36,6 +40,23 @@ const Background = ({ children }: BackgroundProps) => {
     >
       <NavigationBar /> {/* Render NavigationBar within the Background */}
       {children} {/* Render additional children */}
+      <div
+        className="background-buttons"
+        style={{ marginTop: "20px", display: "flex", flexDirection: "column" }}
+      >
+        {images.map((image, index) => (
+          <button
+            key={index}
+            onClick={() => changeBackgroundImage(index)}
+            style={{
+              color: "blue",
+              marginBottom: "10px", // Add spacing between buttons
+            }}
+          >
+            {`Image ${index + 1}`}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
