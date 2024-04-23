@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Grid, GridItem, Show } from "@chakra-ui/react";
-import Background from "./components/Background";
+import NavigationBar from "./components/NavigationBar";
 
-function App() {
+function AppMenu() {
   //return <Button colorScheme="blue">Button</Button>;
   return (
     <>
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppMenu;
