@@ -1,10 +1,14 @@
 import React, { useState, useEffect, Children } from "react";
+import { HStack, Stack, Text } from "@chakra-ui/react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 import image4 from "../assets/image4.jpg";
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 import "../BackgroundAnimation.css";
+import { px } from "framer-motion";
 
 interface BackgroundProps {
   children?: React.ReactNode; // Explicitly type children as React.ReactNode
@@ -67,7 +71,14 @@ const Background = ({ children }: BackgroundProps) => {
       {children} {/* Render additional children */}
       <div
         className="background-buttons"
-        style={{ marginTop: "20px", display: "flex", flexDirection: "column" }}
+        style={{
+          marginTop: "20px",
+          display: "flex",
+          flexDirection: "column",
+          position: "absolute",
+          top: "50%",
+          right: "3%",
+        }}
       >
         {images.map((image, index) => (
           <button
@@ -88,6 +99,40 @@ const Background = ({ children }: BackgroundProps) => {
             }}
           ></button>
         ))}
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: "5%",
+          bottom: "15%",
+        }}
+      >
+        <Stack>
+          <Text color={"white"} fontSize={"x-large"}>
+            Traditional, yet original style Teochew & Cantonese
+          </Text>
+          <Text
+            color={"white"}
+            fontSize={"xxx-large"}
+            paddingBottom={"50px"}
+            fontWeight="bold"
+          >
+            SOUTHERN CHINESE CUISINE
+          </Text>
+          <Button colorScheme="red" width={"auto"}>
+            Book a Table
+          </Button>
+        </Stack>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "0%",
+          right: "5%",
+          width: "40%",
+        }}
+      >
+        <Footer />
       </div>
     </div>
   );
