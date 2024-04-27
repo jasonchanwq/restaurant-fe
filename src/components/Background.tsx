@@ -7,6 +7,7 @@ import image3 from "../assets/image3.jpg";
 import image4 from "../assets/image4.jpg";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
+import BookingDrawer from "./BookingDrawer";
 import "../BackgroundAnimation.css";
 import { px } from "framer-motion";
 
@@ -119,9 +120,7 @@ const Background = ({ children }: BackgroundProps) => {
           >
             SOUTHERN CHINESE CUISINE
           </Text>
-          <Button colorScheme="red" width={"auto"}>
-            Book a Table
-          </Button>
+          <BookingDrawer />
         </Stack>
       </div>
       <div
