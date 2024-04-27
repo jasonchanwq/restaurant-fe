@@ -1,7 +1,7 @@
 import { HStack, Heading, Text, Box, Link as ChakraLink, LinkProps, Flex, Container } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from 'react-router-dom'
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 interface NavButton {
   title?: React.ReactNode;
@@ -17,13 +17,10 @@ const ButtonFeature = ({ title }: NavButton): any => {
 
 const NavigationBar = () => {
   return (
-    <Flex justifyContent="space-between" alignItems="center" p='50px'>
-      <Box>
-        <img src={logo} style={{ width: "100px", height: "100px", opacity: "0.7" }} />
-      </Box>
-      <Box paddingRight={100}>
-        <HStack>
-          <ButtonFeature
+    <HStack justifyContent="space-between" padding="100px">
+      <img src={logo} style={{ width: "100px", height: "100px" }} />
+      <HStack spacing={20} color={"white"}>
+        <ButtonFeature
             title='Home'
           />
           <ButtonFeature
@@ -36,8 +33,7 @@ const NavigationBar = () => {
             title='Contact Us'
           />
         </HStack>
-      </Box>
-    </Flex>
+    </HStack>
   );
 };
 
