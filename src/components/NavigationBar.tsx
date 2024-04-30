@@ -1,38 +1,18 @@
-import { HStack, Heading, Text, Box, Link as ChakraLink, LinkProps, Flex, Container } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from 'react-router-dom'
+import { HStack, Heading, Text, } from "@chakra-ui/react";
 import React from "react";
 import logo from "../assets/logo.svg";
-
-interface NavButton {
-  title?: React.ReactNode;
-}
-
-const ButtonFeature = ({ title }: NavButton): any => {
-  return (
-    <Box p={5} filter='auto'>
-      <Heading fontSize='xl' color='white' >{title}</Heading>
-    </Box>
-  )
-}
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   return (
     <HStack justifyContent="space-between" padding="100px">
       <img src={logo} style={{ width: "100px", height: "100px" }} />
       <HStack spacing={20} color={"white"}>
-        <ButtonFeature
-            title='Home'
-          />
-          <ButtonFeature
-            title='Menu'
-          />
-          <ButtonFeature
-            title='Gallery'
-          />
-          <ButtonFeature
-            title='Contact Us'
-          />
-        </HStack>
+        <Text as={Link} to="/">Home</Text>
+        <Text as={Link} to="/menu">Menu</Text>
+        <Text as={Link} to="/about">About</Text>
+        <Text as={Link} to="/gallery">Gallery</Text>
+      </HStack>
     </HStack>
   );
 };

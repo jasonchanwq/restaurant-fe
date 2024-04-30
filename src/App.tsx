@@ -1,13 +1,11 @@
-import { Button, ButtonGroup, Grid, GridItem, Show } from "@chakra-ui/react";
-import Background from "./components/Background";
-import Footer from "./components/Footer";
+import AppRoutes from "./pages/AppRoutes";
 
 function App() {
-  //return <Button colorScheme="blue">Button</Button>;
   return (
     <>
-		  <Background/>
+      <AppRoutes/>
     </>
+
   );
 }
 
