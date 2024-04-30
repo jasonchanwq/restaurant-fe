@@ -5,7 +5,6 @@ import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 import image4 from "../assets/image4.jpg";
-import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 import BookingDrawer from "./BookingDrawer";
 import "../BackgroundAnimation.css";
@@ -62,13 +61,11 @@ const Background = ({ children }: BackgroundProps) => {
         backgroundImage: `url(${images[backgroundImage]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        /* Add other background properties as needed */
         minHeight:
           "100vh" /* Ensure the background covers the entire viewport */,
-        position: "relative", // Add position relative to contain the children
+        zIndex: 0,
       }}
     >
-      <NavigationBar /> {/* Render NavigationBar within the Background */}
       {children} {/* Render additional children */}
       <div
         className="background-buttons"
@@ -122,16 +119,6 @@ const Background = ({ children }: BackgroundProps) => {
           </Text>
           <BookingDrawer />
         </Stack>
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          bottom: "0%",
-          right: "5%",
-          width: "40%",
-        }}
-      >
-        <Footer />
       </div>
     </div>
   );

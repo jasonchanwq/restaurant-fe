@@ -5,7 +5,15 @@ import phone from "../assets/phone.svg";
 
 const Footer = () => {
   return (
-    <HStack justifyContent="space-between" padding="50px">
+    <HStack
+      justifyContent="space-between"
+      padding="50px"
+      bottom="0%"
+      right="5%"
+      width="30%"
+      position="absolute"
+      zIndex="1000"
+    >
       <HStack spacing={6} color={"white"}>
         <img src={locationpin} style={{ width: "50px", height: "50px" }} />
         <Stack>

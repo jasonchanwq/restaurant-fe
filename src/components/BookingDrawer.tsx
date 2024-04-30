@@ -48,7 +48,7 @@ const BookingDrawer = () => {
   return (
     <>
       {/* Button to open the drawer */}
-      <Button onClick={onOpen} colorScheme="red" width={"auto"}>
+      <Button onClick={onOpen} colorScheme="red">
         Book a Table
       </Button>
 
